@@ -1,0 +1,9 @@
+c:\users\nicolas.bezerra\documents\visual studio 2013\Projects\CalculadoraDeMatriz\CalculadoraDeMatriz\bin\Debug\CalculadoraDeMatriz.exe.config
+c:\users\nicolas.bezerra\documents\visual studio 2013\Projects\CalculadoraDeMatriz\CalculadoraDeMatriz\bin\Debug\CalculadoraDeMatriz.exe
+c:\users\nicolas.bezerra\documents\visual studio 2013\Projects\CalculadoraDeMatriz\CalculadoraDeMatriz\bin\Debug\CalculadoraDeMatriz.pdb
+c:\users\nicolas.bezerra\documents\visual studio 2013\Projects\CalculadoraDeMatriz\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.csprojResolveAssemblyReference.cache
+c:\users\nicolas.bezerra\documents\visual studio 2013\Projects\CalculadoraDeMatriz\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.Form1.resources
+c:\users\nicolas.bezerra\documents\visual studio 2013\Projects\CalculadoraDeMatriz\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.Properties.Resources.resources
+c:\users\nicolas.bezerra\documents\visual studio 2013\Projects\CalculadoraDeMatriz\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.csproj.GenerateResource.Cache
+c:\users\nicolas.bezerra\documents\visual studio 2013\Projects\CalculadoraDeMatriz\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.exe
+c:\users\nicolas.bezerra\documents\visual studio 2013\Projects\CalculadoraDeMatriz\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.pdb
