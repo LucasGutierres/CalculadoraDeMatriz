@@ -30,14 +30,19 @@
         {
             this.matriz1_X = new System.Windows.Forms.Label();
             this.matriz1_Nome = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.matriz1_Col = new System.Windows.Forms.ComboBox();
+            this.matriz1_Coluna = new System.Windows.Forms.ComboBox();
+            this.matriz1_Linha = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.mariz2_Nome = new System.Windows.Forms.Label();
+            this.matriz2_Coluna = new System.Windows.Forms.ComboBox();
+            this.matriz2_Linha = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // matriz1_X
             // 
             this.matriz1_X.AutoSize = true;
-            this.matriz1_X.Location = new System.Drawing.Point(380, 61);
+            this.matriz1_X.Location = new System.Drawing.Point(62, 28);
             this.matriz1_X.Name = "matriz1_X";
             this.matriz1_X.Size = new System.Drawing.Size(14, 13);
             this.matriz1_X.TabIndex = 2;
@@ -46,20 +51,20 @@
             // matriz1_Nome
             // 
             this.matriz1_Nome.AutoSize = true;
-            this.matriz1_Nome.Location = new System.Drawing.Point(351, 42);
+            this.matriz1_Nome.Location = new System.Drawing.Point(12, 9);
             this.matriz1_Nome.Name = "matriz1_Nome";
             this.matriz1_Nome.Size = new System.Drawing.Size(75, 13);
             this.matriz1_Nome.TabIndex = 3;
             this.matriz1_Nome.Text = "Primeira Matriz";
             // 
-            // comboBox1
+            // matriz1_Coluna
             // 
-            this.comboBox1.AccessibleDescription = "";
-            this.comboBox1.AccessibleName = "";
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.matriz1_Coluna.AccessibleDescription = "";
+            this.matriz1_Coluna.AccessibleName = "";
+            this.matriz1_Coluna.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.matriz1_Coluna.FormattingEnabled = true;
+            this.matriz1_Coluna.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.matriz1_Coluna.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -70,17 +75,17 @@
             "8",
             "9",
             "10"});
-            this.comboBox1.Location = new System.Drawing.Point(400, 58);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(44, 21);
-            this.comboBox1.TabIndex = 6;
+            this.matriz1_Coluna.Location = new System.Drawing.Point(82, 25);
+            this.matriz1_Coluna.Name = "matriz1_Coluna";
+            this.matriz1_Coluna.Size = new System.Drawing.Size(44, 21);
+            this.matriz1_Coluna.TabIndex = 6;
             // 
-            // matriz1_Col
+            // matriz1_Linha
             // 
-            this.matriz1_Col.AccessibleDescription = "";
-            this.matriz1_Col.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.matriz1_Col.FormattingEnabled = true;
-            this.matriz1_Col.Items.AddRange(new object[] {
+            this.matriz1_Linha.AccessibleDescription = "";
+            this.matriz1_Linha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.matriz1_Linha.FormattingEnabled = true;
+            this.matriz1_Linha.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -91,19 +96,96 @@
             "8",
             "9",
             "10"});
-            this.matriz1_Col.Location = new System.Drawing.Point(330, 57);
-            this.matriz1_Col.Name = "matriz1_Col";
-            this.matriz1_Col.Size = new System.Drawing.Size(44, 21);
-            this.matriz1_Col.TabIndex = 5;
+            this.matriz1_Linha.Location = new System.Drawing.Point(12, 25);
+            this.matriz1_Linha.Name = "matriz1_Linha";
+            this.matriz1_Linha.Size = new System.Drawing.Size(44, 21);
+            this.matriz1_Linha.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(152, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 21);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Criar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // mariz2_Nome
+            // 
+            this.mariz2_Nome.AutoSize = true;
+            this.mariz2_Nome.Location = new System.Drawing.Point(386, 9);
+            this.mariz2_Nome.Name = "mariz2_Nome";
+            this.mariz2_Nome.Size = new System.Drawing.Size(81, 13);
+            this.mariz2_Nome.TabIndex = 8;
+            this.mariz2_Nome.Text = "Segunda Matriz";
+            // 
+            // matriz2_Coluna
+            // 
+            this.matriz2_Coluna.AccessibleDescription = "";
+            this.matriz2_Coluna.AccessibleName = "";
+            this.matriz2_Coluna.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.matriz2_Coluna.FormattingEnabled = true;
+            this.matriz2_Coluna.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.matriz2_Coluna.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.matriz2_Coluna.Location = new System.Drawing.Point(459, 25);
+            this.matriz2_Coluna.Name = "matriz2_Coluna";
+            this.matriz2_Coluna.Size = new System.Drawing.Size(44, 21);
+            this.matriz2_Coluna.TabIndex = 11;
+            // 
+            // matriz2_Linha
+            // 
+            this.matriz2_Linha.AccessibleDescription = "";
+            this.matriz2_Linha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.matriz2_Linha.FormattingEnabled = true;
+            this.matriz2_Linha.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.matriz2_Linha.Location = new System.Drawing.Point(389, 25);
+            this.matriz2_Linha.Name = "matriz2_Linha";
+            this.matriz2_Linha.Size = new System.Drawing.Size(44, 21);
+            this.matriz2_Linha.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(439, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(14, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "X";
             // 
             // Form1
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 457);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.matriz1_Col);
+            this.ClientSize = new System.Drawing.Size(839, 398);
+            this.Controls.Add(this.matriz2_Coluna);
+            this.Controls.Add(this.matriz2_Linha);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.mariz2_Nome);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.matriz1_Coluna);
+            this.Controls.Add(this.matriz1_Linha);
             this.Controls.Add(this.matriz1_Nome);
             this.Controls.Add(this.matriz1_X);
             this.Name = "Form1";
@@ -117,8 +199,13 @@
 
         private System.Windows.Forms.Label matriz1_X;
         private System.Windows.Forms.Label matriz1_Nome;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox matriz1_Col;
+        private System.Windows.Forms.ComboBox matriz1_Coluna;
+        private System.Windows.Forms.ComboBox matriz1_Linha;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label mariz2_Nome;
+        private System.Windows.Forms.ComboBox matriz2_Coluna;
+        private System.Windows.Forms.ComboBox matriz2_Linha;
+        private System.Windows.Forms.Label label1;
     }
 }
 

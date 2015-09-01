@@ -7,3 +7,12 @@ c:\users\nicolas.bezerra\documents\visual studio 2013\Projects\CalculadoraDeMatr
 c:\users\nicolas.bezerra\documents\visual studio 2013\Projects\CalculadoraDeMatriz\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.csproj.GenerateResource.Cache
 c:\users\nicolas.bezerra\documents\visual studio 2013\Projects\CalculadoraDeMatriz\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.exe
 c:\users\nicolas.bezerra\documents\visual studio 2013\Projects\CalculadoraDeMatriz\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.pdb
+C:\Users\Nicolas.Bezerra\Desktop\GitHub\CalculadoraDeMatriz\CalculadoraDeMatriz\bin\Debug\CalculadoraDeMatriz.exe.config
+C:\Users\Nicolas.Bezerra\Desktop\GitHub\CalculadoraDeMatriz\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.exe
+C:\Users\Nicolas.Bezerra\Desktop\GitHub\CalculadoraDeMatriz\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.pdb
+C:\Users\Nicolas.Bezerra\Desktop\GitHub\CalculadoraDeMatriz\CalculadoraDeMatriz\bin\Debug\CalculadoraDeMatriz.exe
+C:\Users\Nicolas.Bezerra\Desktop\GitHub\CalculadoraDeMatriz\CalculadoraDeMatriz\bin\Debug\CalculadoraDeMatriz.pdb
+C:\Users\Nicolas.Bezerra\Desktop\GitHub\CalculadoraDeMatriz\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.csprojResolveAssemblyReference.cache
+C:\Users\Nicolas.Bezerra\Desktop\GitHub\CalculadoraDeMatriz\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.Form1.resources
+C:\Users\Nicolas.Bezerra\Desktop\GitHub\CalculadoraDeMatriz\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.Properties.Resources.resources
+C:\Users\Nicolas.Bezerra\Desktop\GitHub\CalculadoraDeMatriz\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.csproj.GenerateResource.Cache
