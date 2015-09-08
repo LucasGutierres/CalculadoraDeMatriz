@@ -13,9 +13,16 @@ namespace CalculadoraDeMatriz
 {
     public partial class Form1 : Form
     { 
-        public int linha;
-        public int coluna;
-        private TextBox[,] Matrix;
+        public int linha1;
+        public int coluna1;
+        public int linha2;
+        public int coluna2;
+        public int colunaResposta;
+        public int linhaResposta;
+        private TextBox[,] Matrix1;
+        private TextBox[,] Matrix2;
+        private TextBox[,] MatrixR;
+
         public Form1()
         {
            
@@ -24,36 +31,150 @@ namespace CalculadoraDeMatriz
         
         private void button1_Click(object sender, EventArgs e)
         {
-                linha = Convert.ToInt16(matriz1_Linha.Text);
-                coluna = Convert.ToInt16(matriz1_Coluna.Text);
-                if (Matrix != null)
+                linha1 = Convert.ToInt16(matriz1_Linha.Text);
+                coluna1 = Convert.ToInt16(matriz1_Coluna.Text);
+                linha2 = Convert.ToInt16(matriz2_Linha.Text);
+                coluna2 = Convert.ToInt16(matriz2_Coluna.Text);
+
+                TextBoxOverride();
+                
+                Matrix1 = new TextBox[linha1, coluna1];
+                Matrix2 = new TextBox[linha2, coluna2];
+                Criar();
+        }
+
+        void TextBoxOverride() {
+            if (Matrix1 != null)
+            {
+                for (int i = 0; i < Matrix1.GetLength(0); i++)
                 {
-                    for (int i = 0; i < Matrix.GetLength(0); i++)
+                    for (int j = 0; j < Matrix1.GetLength(1); j++)
                     {
-                        for (int j = 0; j < Matrix.GetLength(1); j++)
-                        {
-                            if (Matrix[i, j] != null)
-                                this.Controls.Remove(Matrix[i, j]);
-                        }
+                        if (Matrix1[i, j] != null)
+                            this.Controls.Remove(Matrix1[i, j]);
                     }
                 }
-                Matrix = new TextBox[linha, coluna];
-                Criador();
-        }
-        void Criador() {
-            for (int i = 0; i < Matrix.GetLength(0); i++ ) {
-                for (int j = 0; j < Matrix.GetLength(1); j++) {
-                Matrix[i,j] = new TextBox();
-                Matrix[i,j].Text = "0";
-                Matrix[i, j].Top = (i * Matrix[i,j].Height) + 60;
-                Matrix[i, j].Left = (j * 35) + 10;
-                Matrix[i, j].Width = 30;
-                this.Controls.Add(Matrix[i, j]);
+            }
+            if (Matrix2 != null)
+            {
+                for (int i = 0; i < Matrix2.GetLength(0); i++)
+                {
+                    for (int j = 0; j < Matrix2.GetLength(1); j++)
+                    {
+                        if (Matrix2[i, j] != null)
+                            this.Controls.Remove(Matrix2[i, j]);
+                    }
                 }
+            }
+        }
+
+        void Criar() {
+
+                for (int i = 0; i < Matrix1.GetLength(0); i++)
+                {
+                    for (int j = 0; j < Matrix1.GetLength(1); j++)
+                    {
+                        Matrix1[i, j] = new TextBox();
+                        Matrix1[i, j].Text = "3";
+                        Matrix1[i, j].Top = (i * Matrix1[i, j].Height) + 60;
+                        Matrix1[i, j].Left = (j * 35) + 10;
+                        Matrix1[i, j].Width = 30;
+                        this.Controls.Add(Matrix1[i, j]);
+                    }
+                }
+                 for (int i = 0; i < Matrix2.GetLength(0); i++)
+                {
+                    for (int j = 0; j < Matrix2.GetLength(1); j++)
+                    {
+                        Matrix2[i, j] = new TextBox();
+                        Matrix2[i, j].Text = "1";
+                        Matrix2[i, j].Top = (i * Matrix2[i, j].Height) + 60;
+                        Matrix2[i, j].Left = (j * 35) + 480;
+                        Matrix2[i, j].Width = 30;
+                        this.Controls.Add(Matrix2[i, j]);
+                    }
+                }
+
+            }
+
+        private void SumButton_Click(object sender, EventArgs e)
+        {
+            linhaResposta = linha1;
+            colunaResposta = coluna1;
+
+            if (MatrixR != null)
+            {
+                for (int i = 0; i < MatrixR.GetLength(0); i++)
+                {
+                    for (int j = 0; j < MatrixR.GetLength(1); j++)
+                    {
+                        if (MatrixR[i, j] != null)
+                            this.Controls.Remove(MatrixR[i, j]);
+                    }
+                }
+            }
+
+            MatrixR = new TextBox[linhaResposta, colunaResposta];
+
+            if(linha1 == linha2 && coluna2 == coluna1){
+                for (int i = 0; i < MatrixR.GetLength(0); i++) 
+                {
+                    for (int j = 0; j < MatrixR.GetLength(0); j++) 
+                    {
+                        MatrixR[i, j] = new TextBox();
+                        MatrixR[i, j].Text = Convert.ToString(Convert.ToInt32(Matrix1[i, j].Text) + Convert.ToInt32(Matrix2[i,j].Text));
+                        MatrixR[i, j].Top = (i * MatrixR[i, j].Height) + 180;
+                        MatrixR[i, j].Left = (j * 35) + 245;
+                        MatrixR[i, j].Width = 30;
+                        this.Controls.Add(MatrixR[i,j]);
+                    }
+
+                }
+                
+            }
+        }
+
+        private void MinButton_Click(object sender, EventArgs e)
+        {
+            linhaResposta = linha1;
+            colunaResposta = coluna1;
+
+            if (MatrixR != null)
+            {
+                for (int i = 0; i < MatrixR.GetLength(0); i++)
+                {
+                    for (int j = 0; j < MatrixR.GetLength(1); j++)
+                    {
+                        if (MatrixR[i, j] != null)
+                            this.Controls.Remove(MatrixR[i, j]);
+                    }
+                }
+            }
+
+            MatrixR = new TextBox[linhaResposta, colunaResposta];
+
+            if (linha1 == linha2 && coluna2 == coluna1)
+            {
+                for (int i = 0; i < MatrixR.GetLength(0); i++)
+                {
+                    for (int j = 0; j < MatrixR.GetLength(0); j++)
+                    {
+                        MatrixR[i, j] = new TextBox();
+                        MatrixR[i, j].Text = Convert.ToString(Convert.ToInt32(Matrix1[i, j].Text) - Convert.ToInt32(Matrix2[i, j].Text));
+                        MatrixR[i, j].Top = (i * MatrixR[i, j].Height) + 180;
+                        MatrixR[i, j].Left = (j * 35) + 245;
+                        MatrixR[i, j].Width = 30;
+                        this.Controls.Add(MatrixR[i, j]);
+                    }
+
+                }
+
             }
 
         }
 
-   
+
+
+        }
     }
-}
+

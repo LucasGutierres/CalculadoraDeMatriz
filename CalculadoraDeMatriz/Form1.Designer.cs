@@ -37,6 +37,8 @@
             this.matriz2_Coluna = new System.Windows.Forms.ComboBox();
             this.matriz2_Linha = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.SumButton = new System.Windows.Forms.Button();
+            this.MinButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // matriz1_X
@@ -103,7 +105,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(152, 25);
+            this.button1.Location = new System.Drawing.Point(355, 24);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 21);
             this.button1.TabIndex = 7;
@@ -114,7 +116,7 @@
             // mariz2_Nome
             // 
             this.mariz2_Nome.AutoSize = true;
-            this.mariz2_Nome.Location = new System.Drawing.Point(386, 9);
+            this.mariz2_Nome.Location = new System.Drawing.Point(742, 9);
             this.mariz2_Nome.Name = "mariz2_Nome";
             this.mariz2_Nome.Size = new System.Drawing.Size(81, 13);
             this.mariz2_Nome.TabIndex = 8;
@@ -138,7 +140,7 @@
             "8",
             "9",
             "10"});
-            this.matriz2_Coluna.Location = new System.Drawing.Point(459, 25);
+            this.matriz2_Coluna.Location = new System.Drawing.Point(779, 25);
             this.matriz2_Coluna.Name = "matriz2_Coluna";
             this.matriz2_Coluna.Size = new System.Drawing.Size(44, 21);
             this.matriz2_Coluna.TabIndex = 11;
@@ -159,7 +161,7 @@
             "8",
             "9",
             "10"});
-            this.matriz2_Linha.Location = new System.Drawing.Point(389, 25);
+            this.matriz2_Linha.Location = new System.Drawing.Point(709, 25);
             this.matriz2_Linha.Name = "matriz2_Linha";
             this.matriz2_Linha.Size = new System.Drawing.Size(44, 21);
             this.matriz2_Linha.TabIndex = 10;
@@ -167,11 +169,33 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(439, 28);
+            this.label1.Location = new System.Drawing.Point(759, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "X";
+            // 
+            // SumButton
+            // 
+            this.SumButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SumButton.Location = new System.Drawing.Point(355, 51);
+            this.SumButton.Name = "SumButton";
+            this.SumButton.Size = new System.Drawing.Size(28, 30);
+            this.SumButton.TabIndex = 12;
+            this.SumButton.Text = "+";
+            this.SumButton.UseVisualStyleBackColor = true;
+            this.SumButton.Click += new System.EventHandler(this.SumButton_Click);
+            // 
+            // MinButton
+            // 
+            this.MinButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinButton.Location = new System.Drawing.Point(402, 51);
+            this.MinButton.Name = "MinButton";
+            this.MinButton.Size = new System.Drawing.Size(28, 30);
+            this.MinButton.TabIndex = 13;
+            this.MinButton.Text = "-";
+            this.MinButton.UseVisualStyleBackColor = true;
+            this.MinButton.Click += new System.EventHandler(this.MinButton_Click);
             // 
             // Form1
             // 
@@ -179,6 +203,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 398);
+            this.Controls.Add(this.MinButton);
+            this.Controls.Add(this.SumButton);
             this.Controls.Add(this.matriz2_Coluna);
             this.Controls.Add(this.matriz2_Linha);
             this.Controls.Add(this.label1);
@@ -206,6 +232,8 @@
         private System.Windows.Forms.ComboBox matriz2_Coluna;
         private System.Windows.Forms.ComboBox matriz2_Linha;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button SumButton;
+        private System.Windows.Forms.Button MinButton;
     }
 }
 
