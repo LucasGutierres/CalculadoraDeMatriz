@@ -119,7 +119,7 @@ namespace CalculadoraDeMatriz
             if(linha1 == linha2 && coluna2 == coluna1){
                 for (int i = 0; i < MatrixR.GetLength(0); i++) 
                 {
-                    for (int j = 0; j < MatrixR.GetLength(0); j++) 
+                    for (int j = 0; j < MatrixR.GetLength(1); j++) 
                     {
                         MatrixR[i, j] = new TextBox();
                         MatrixR[i, j].Text = Convert.ToString(Convert.ToInt32(Matrix1[i, j].Text) + Convert.ToInt32(Matrix2[i,j].Text));
@@ -157,7 +157,7 @@ namespace CalculadoraDeMatriz
             {
                 for (int i = 0; i < MatrixR.GetLength(0); i++)
                 {
-                    for (int j = 0; j < MatrixR.GetLength(0); j++)
+                    for (int j = 0; j < MatrixR.GetLength(1); j++)
                     {
                         MatrixR[i, j] = new TextBox();
                         MatrixR[i, j].Text = Convert.ToString(Convert.ToInt32(Matrix1[i, j].Text) - Convert.ToInt32(Matrix2[i, j].Text));
@@ -166,15 +166,12 @@ namespace CalculadoraDeMatriz
                         MatrixR[i, j].Width = 30;
                         this.Controls.Add(MatrixR[i, j]);
                     }
-
                 }
-
             }
-
         }
+       
 
 
-
-        }
+        }//lastline
     }
 

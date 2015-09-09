@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SumButton = new System.Windows.Forms.Button();
             this.MinButton = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // matriz1_X
@@ -197,12 +198,23 @@
             this.MinButton.UseVisualStyleBackColor = true;
             this.MinButton.Click += new System.EventHandler(this.MinButton_Click);
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(355, 98);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(28, 30);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "*";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 398);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.MinButton);
             this.Controls.Add(this.SumButton);
             this.Controls.Add(this.matriz2_Coluna);
@@ -234,6 +246,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button SumButton;
         private System.Windows.Forms.Button MinButton;
+        private System.Windows.Forms.Button button2;
     }
 }
 
