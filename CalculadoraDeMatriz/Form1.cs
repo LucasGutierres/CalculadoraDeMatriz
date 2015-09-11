@@ -19,6 +19,7 @@ namespace CalculadoraDeMatriz
         public int coluna2;
         public int colunaResposta;
         public int linhaResposta;
+        private int multEscalar = 2;
         private TextBox[,] Matrix1;
         private TextBox[,] Matrix2;
         private TextBox[,] MatrixR;
@@ -31,10 +32,10 @@ namespace CalculadoraDeMatriz
         
         private void button1_Click(object sender, EventArgs e)
         {
-                linha1 = Convert.ToInt16(matriz1_Linha.Text);
-                coluna1 = Convert.ToInt16(matriz1_Coluna.Text);
-                linha2 = Convert.ToInt16(matriz2_Linha.Text);
-                coluna2 = Convert.ToInt16(matriz2_Coluna.Text);
+            if (matriz1_Linha.SelectedIndex == -1) linha1 = 0; else linha1 = Convert.ToInt32(matriz1_Linha.Text);
+            if (matriz1_Coluna.SelectedIndex == -1) coluna1 = 0; else coluna1 = Convert.ToInt32(matriz1_Coluna.Text);
+            if (matriz2_Linha.SelectedIndex == -1) linha2 = 0; else linha2 = Convert.ToInt16(matriz2_Linha.Text);
+            if (matriz2_Coluna.SelectedIndex == -1) coluna2 = 0; else coluna2 = Convert.ToInt16(matriz2_Coluna.Text);
 
                 TextBoxOverride();
                 
@@ -169,8 +170,26 @@ namespace CalculadoraDeMatriz
                 }
             }
         }
-       
 
+        private void MultEscalar(object sender, EventArgs e)
+        {
+            MatrixR = new TextBox[linha1, coluna1];
+
+            for (int i = 0; i < MatrixR.GetLength(0); i++)
+            {
+                for (int j = 0; j < MatrixR.GetLength(1); j++)
+                {
+                    MatrixR[i, j] = new TextBox();
+                    MatrixR[i, j].Text = Convert.ToString(Convert.ToInt32(Matrix1[i, j].Text) * multEscalar);
+                    MatrixR[i, j].Top = (i * MatrixR[i, j].Height) + 180;
+                    MatrixR[i, j].Left = (j * 35) + 245;
+                    MatrixR[i, j].Width = 30;
+                    this.Controls.Add(MatrixR[i, j]);
+                }
+            }
+        }
+       
+        
 
         }//lastline
     }
