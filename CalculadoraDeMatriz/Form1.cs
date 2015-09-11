@@ -173,6 +173,17 @@ namespace CalculadoraDeMatriz
 
         private void MultEscalar(object sender, EventArgs e)
         {
+            if (MatrixR != null)
+            {
+                for (int i = 0; i < MatrixR.GetLength(0); i++)
+                {
+                    for (int j = 0; j < MatrixR.GetLength(1); j++)
+                    {
+                        if (MatrixR[i, j] != null)
+                            this.Controls.Remove(MatrixR[i, j]);
+                    }
+                }
+            }
             MatrixR = new TextBox[linha1, coluna1];
 
             for (int i = 0; i < MatrixR.GetLength(0); i++)
@@ -188,6 +199,38 @@ namespace CalculadoraDeMatriz
                 }
             }
         }
+
+        private void Simetria(object sender, EventArgs e)
+        {
+            
+            if (MatrixR != null)
+            {
+                for (int i = 0; i < MatrixR.GetLength(0); i++)
+                {
+                    for (int j = 0; j < MatrixR.GetLength(1); j++)
+                    {
+                        if (MatrixR[i, j] != null)
+                            this.Controls.Remove(MatrixR[i, j]);
+                    }
+                }
+            }
+            
+            MatrixR = new TextBox[coluna1,linha1];
+
+            for (int i = 0; i < MatrixR.GetLength(0); i++)
+            {
+                for (int j = 0; j < MatrixR.GetLength(1); j++)
+                {
+                    MatrixR[i, j] = new TextBox();
+                    MatrixR[i, j].Text = Convert.ToString(Matrix1[j,i].Text);
+                    MatrixR[i, j].Top = (i * MatrixR[i, j].Height) + 180;
+                    MatrixR[i, j].Left = (j * 35) + 245;
+                    MatrixR[i, j].Width = 30;
+                    this.Controls.Add(MatrixR[i, j]);
+                }
+            }
+        }
+
        
         
 

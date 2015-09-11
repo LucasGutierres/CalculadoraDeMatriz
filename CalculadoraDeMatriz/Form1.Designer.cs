@@ -41,6 +41,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.matriz1_Linha = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // matriz1_X
@@ -226,12 +227,24 @@
             this.matriz1_Linha.Size = new System.Drawing.Size(44, 21);
             this.matriz1_Linha.TabIndex = 16;
             // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(346, 142);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(96, 29);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "Simetrica";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Simetria);
+            // 
             // Form1
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 398);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.matriz1_Linha);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
@@ -267,6 +280,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox matriz1_Linha;
+        private System.Windows.Forms.Button button3;
     }
 }
 
