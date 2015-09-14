@@ -42,6 +42,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.matriz1_Linha = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.QuoeficienteME = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // matriz1_X
@@ -186,7 +188,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(402, 98);
+            this.button2.Location = new System.Drawing.Point(402, 107);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(28, 29);
             this.button2.TabIndex = 14;
@@ -197,11 +199,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(327, 108);
+            this.label2.Location = new System.Drawing.Point(369, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 15;
-            this.label2.Text = "EScalar ->";
+            this.label2.Text = "Escalar";
             // 
             // matriz1_Linha
             // 
@@ -229,14 +231,34 @@
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(346, 142);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(355, 147);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 29);
+            this.button3.Size = new System.Drawing.Size(75, 29);
             this.button3.TabIndex = 17;
             this.button3.Text = "Simetrica";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Simetria);
+            // 
+            // QuoeficienteME
+            // 
+            this.QuoeficienteME.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuoeficienteME.Location = new System.Drawing.Point(355, 108);
+            this.QuoeficienteME.Name = "QuoeficienteME";
+            this.QuoeficienteME.Size = new System.Drawing.Size(28, 26);
+            this.QuoeficienteME.TabIndex = 18;
+            this.QuoeficienteME.Text = "1";
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(436, 51);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(28, 30);
+            this.button4.TabIndex = 19;
+            this.button4.Text = "*";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Mult);
             // 
             // Form1
             // 
@@ -244,6 +266,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 398);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.QuoeficienteME);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.matriz1_Linha);
             this.Controls.Add(this.label2);
@@ -281,6 +305,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox matriz1_Linha;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox QuoeficienteME;
+        private System.Windows.Forms.Button button4;
     }
 }
 

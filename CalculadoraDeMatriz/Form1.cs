@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing;
 
 namespace CalculadoraDeMatriz
 {
@@ -19,14 +18,13 @@ namespace CalculadoraDeMatriz
         public int coluna2;
         public int colunaResposta;
         public int linhaResposta;
-        private int multEscalar = 2;
+        private int multEscalar;
         private TextBox[,] Matrix1;
         private TextBox[,] Matrix2;
         private TextBox[,] MatrixR;
 
         public Form1()
-        {
-           
+        {           
             InitializeComponent();
         }
         
@@ -173,6 +171,7 @@ namespace CalculadoraDeMatriz
 
         private void MultEscalar(object sender, EventArgs e)
         {
+            multEscalar = Convert.ToInt32(QuoeficienteME.Text);
             if (MatrixR != null)
             {
                 for (int i = 0; i < MatrixR.GetLength(0); i++)
@@ -229,6 +228,30 @@ namespace CalculadoraDeMatriz
                     this.Controls.Add(MatrixR[i, j]);
                 }
             }
+        }
+
+        private void Mult(object sender, EventArgs e)
+        {
+            MatrixR = new TextBox[linha1,coluna2];
+            for (int i = 0; i < MatrixR.GetLength(0); i++)
+            {
+                for (int j = 0; j < MatrixR.GetLength(1); j++)
+                { 
+                    for(int n = 0 ; n < coluna1 ; n++)
+                        {
+                            double help = Convert.ToDouble(MatrixR[i, j].Text);
+                            help += Convert.ToDouble(Matrix1[i,n].Text) * Convert.ToDouble(Matrix2[n,j].Text);
+                            MatrixR[i, j].Text = Convert.ToString(help);
+                        }
+                    MatrixR[i, j] = new TextBox();
+                    MatrixR[i, j].Top = (i * MatrixR[i, j].Height) + 180;
+                    MatrixR[i, j].Left = (j * 35) + 245;
+                    MatrixR[i, j].Width = 30;
+                    this.Controls.Add(MatrixR[i, j]);
+                    
+                }
+            }
+
         }
 
        
