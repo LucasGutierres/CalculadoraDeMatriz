@@ -1,0 +1,14 @@
+Sobre a calculadora de matriz:
+-Gerar matriz a partir de formula
+-Escolher o tamanho dela (X)
+-Operações básicas 
+-Multiplicação escalar (x)
+-Pegar a inversa
+-Transpor a matriz
+-Calcular o determinante
+-Mensagens de erros
+-Verificar se é inversa
+-Verificar / fazer simétria (x/2)
+-Rotação translação e escala de objetos (2D)
+-Fazer pela formula
+Apresentação da calculadora: 28/09
