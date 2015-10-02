@@ -110,7 +110,7 @@ namespace CalculadoraDeMatriz
                     {
                         
                         Matrix1[i, j] = new TextBox();
-                        Matrix1[i, j].Text = Convert.ToString(i + j);
+                        Matrix1[i, j].Text = "";
                         Matrix1[i, j].Top = 10 + (i*30);
                         Matrix1[i, j].Left = (j * 35) + 10;
                         Matrix1[i, j].Width = 30;
@@ -122,7 +122,7 @@ namespace CalculadoraDeMatriz
                     for (int j = 0; j < Matrix2.GetLength(1); j++)
                     {
                         Matrix2[i, j] = new TextBox();
-                        Matrix2[i, j].Text = Convert.ToString(i-j);
+                        Matrix2[i, j].Text = "";
                         Matrix2[i, j].Top = 10 + (i * 30);
                         Matrix2[i, j].Left = (j * 35) + 10;
                         Matrix2[i, j].Width = 30;
